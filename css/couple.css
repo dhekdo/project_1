@@ -1,0 +1,688 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-weight: 300;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 135px;
+    background-color: white;
+    min-width: 1240px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.top {
+    height: 67.5px;
+    position: relative;
+}
+
+.top>div>a>img {
+    margin-top: 5px;
+    width: 250px;
+    height: auto;
+}
+
+.searchbar {
+    width: 500px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5px;
+}
+
+.searchbar>input[type="search"] {
+    width: 450px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #333;
+    position: relative;
+    padding: 5px;
+}
+
+.searchbar>img {
+    width: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 55px;
+}
+
+.icon {
+    width: 150px;
+    height: 65px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+}
+
+.icon ul {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+nav {
+    height: 67.5px;
+    background-color: #333;
+}
+
+nav ul {
+    width: 100%;
+    height: 67.5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1200px;
+}
+
+nav ul li a {
+    padding: 0 22px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li:hover a {
+    color: #ff4000;
+}
+
+.all {
+    min-width: 1200px;
+}
+#positionup {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 상단 */
+.topbox {
+    width: 1240px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+
+.topbox div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.topbox div img {
+    width: 100%;
+}
+
+.topbox div img:not(:first-child) {
+    display: none;
+}
+
+.topbox ul {
+    width: 60%;
+    display: flex;
+}
+
+.topbox li {
+    width: 25%;
+    margin: 8px 8px 0 0;
+    position: relative;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.topbox > div >ul li div {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: white;
+    display: none;
+}
+.topbox > div >ul li:first-child div {
+    display: block;
+}
+
+.topbox li img {
+    width: 100%;
+}
+
+
+.topbox form {
+    width: 50%;
+    margin-left: 30px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 28px 0 30px 0;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.topbox form table {
+    width: 100%;
+    border-spacing: 0 25px;
+}
+
+.topbox form table button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1.5px 3px;
+    font-size: 11.5px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.topbox form table:nth-of-type(1) tr:nth-of-type(2) td a {
+    font-size: 14px;
+    padding: 18px 25px;
+    float: right;
+    background-color: #fa5500;
+    color: white;
+}
+
+.topbox form table:nth-of-type(2) tr:nth-of-type(2) td button {
+    border: none;
+    border-bottom: 1px solid black;
+    float: right;
+    font-weight: bold;
+}
+
+.topbox form table:nth-of-type(4) tr button {
+    border: none;
+    border-bottom: 1px solid black;
+    float: right;
+    font-weight: bold;
+}
+
+.topbox select {
+    width: 100%;
+    height: 38px;
+    background-color: #f8f8f8;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.topbox form td {
+    font-size: 12.5px;
+}
+
+.topbox form td:first-child {
+    width: 150px;
+}
+
+.topbox form>table:nth-of-type(1) {
+    border-bottom: 2px solid #333;
+}
+
+.topbox form table:not(:nth-of-type(1)) {
+    border-bottom: 1px solid grey;
+}
+
+.topbox form>table:nth-of-type(1) tr:first-child td:nth-of-type(2) {
+    font-size: 17px;
+    color: #808080;
+    text-decoration: line-through;
+}
+
+.topbox form>table:nth-of-type(1) tr:nth-child(2) td:nth-of-type(2) {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.topbox form>table:nth-of-type(1) tr:nth-child(2) td:nth-of-type(2)::after {
+    content: "60%";
+    color: #ff4000;
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+.topbox form table:nth-of-type(2) span {
+    font-size: 16px;
+}
+
+.topbox form table:nth-of-type(2) tr:nth-child(2) span {
+    color: #ff4000;
+}
+
+.topbox form .button_gr {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.topbox form .button_gr ul,
+.topbox form .button_gr li {
+    width: 100%;
+    margin-left: 1.1px;
+}
+.topbox form .button_gr li button {
+    cursor: pointer;
+}
+.topbox form .button_gr ul li:nth-child(1) button {
+    width: 200px;
+    height: 70px;
+    background-color: #333;
+    border: none;
+    color: white;
+}
+
+.topbox form .button_gr ul li:nth-child(2) button {
+    width: 250px;
+    height: 70px;
+    background-color: #7d7d7d;
+    border: none;
+    color: white;
+}
+
+.topbox form .button_gr ul li:nth-child(3) button {
+    width: 70px;
+    height: 70px;
+    background-color: #fa5500;
+    border: none;
+}
+
+.topbox form .button_gr ul li:nth-child(3) button img {
+    width: 100%;
+}
+
+.topbox form .button_gr ul li:nth-child(4) button {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    position: relative;
+    background-color: white;
+}
+
+.topbox form .button_gr ul li:nth-child(4) button p {
+    font-size: 10px;
+    color: grey;
+
+}
+
+.topbox form .button_gr ul li:nth-child(4) button img {
+    width: 53%;
+    margin-top: 6px;
+}
+
+.topbox form .menu_info {
+    width: 100%;
+    margin-top: 50px;
+    background-color: #f8f8f8;
+    padding: 15px 0;
+}
+
+.topbox form .menu_info table {
+    width: 90%;
+    margin: 0 auto;
+    border-spacing: 5px;
+}
+
+.topbox form .menu_info caption {
+    text-align: left;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.topbox form .menu_info table tr td:nth-of-type(1)::before {
+    content: "• ";
+}
+
+/* 광고 구좌 */
+.banner {
+    width: 1240px;
+    margin: 150px auto;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+}
+
+/* 다른 상품 둘러보기 */
+.middle {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.middle ul {
+    width: 100%;
+    display: flex;
+
+}
+
+.middle ul li {
+    width: 12.5%;
+    margin: 0 5px;
+}
+.middle ul li:hover img {
+    transform: scale(1.3);
+    opacity: 0.7;
+}
+
+.middle ul li img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.middle ul li:nth-of-type(8) {
+    margin-right: 0;
+}
+
+.middle ul li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.middle h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0 8px 4px;
+}
+
+/* 디테일 메뉴바 */
+.detail {
+    width: 100%;
+    margin: 80px 0 0 0;
+}
+.detail ul {
+    width: 1240px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.detail ul li {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid grey;
+    border-bottom: 3px solid black;
+}
+.detail ul li.on {
+    border: 3px solid black;
+    border-bottom: none;
+
+}
+
+.detail ul li a {
+    font-size: 16.5px;
+}
+
+/* 상세페이지 */
+.mainpr {
+    width: 100%;
+}
+
+.mainpr li {
+    text-align: center;
+}
+
+
+/* 하단 상품필수정보 */
+.bottom_table {
+    width: 1240px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.bottom_table table {
+    width: 100%;
+    border-top: 2px solid #333;
+    border-collapse: collapse;
+}
+
+.bottom_table caption {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: left;
+    margin: 18px 0;
+}
+
+.bottom_table td {
+    font-size: 12.5px;
+    padding: 15px 0;
+}
+
+.bottom_table table tr,
+.bottom_table table {
+    border-bottom: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+.bottom_table table tr .info_bottom {
+    border-bottom: 2px solid #333;
+}
+
+.bottom_table td:first-child {
+    text-indent: 40px;
+    width: 30%;
+}
+
+
+/* 하단 썸네일 구좌 */
+.bottom {
+    width: 1240px;
+    margin: 80px auto;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 60px;
+    left: 8px;
+}
+
+h2::after {
+    content: " \002B";
+}
+
+.bottom_imgbox ul,
+.bottom_imgbox2 ul {
+    display: flex;
+    width: 100%
+}
+
+.bottom_imgbox ul li,
+.bottom_imgbox2 ul li {
+    width: 16.6%;
+    margin: 80px 5px;
+}
+
+.bottom_imgbox ul li img,
+.bottom_imgbox2 ul li img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.bottom h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 8px 0 5px 4px;
+}
+
+.bottom p {
+    margin: 15px 0 0 4px;
+    font-size: 13px;
+    position: relative;
+}
+
+.bottom span:nth-child(1) {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bottom span:nth-child(2) {
+    text-decoration: line-through;
+    color: #808080;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.bottom span:nth-child(3) {
+    position: absolute;
+    right: 10px;
+    font-size: 13.5px;
+    color: #ff4000;
+    font-weight: bold;
+}
+
+/* 리뷰 구좌 */
+.review {
+    width: 1240px;
+    margin: 80px auto 200px;
+}
+.review table {
+    width: 100%;
+    border-spacing: 20px;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+.review table tr th {
+    font-weight: bold;
+}
+.review table tr th, .review table td {
+    font-size: 16px;
+}
+.review table tr:first-child td:nth-child(5) {
+    color: #8ca74b
+}
+.review button {
+    background-color: #ff4000;
+    padding: 8px;
+    margin: 8px 0;
+    cursor: pointer;
+    float: right;
+    border: none;
+    color: white;
+}
+
+/* 문의하기 구좌 */
+.qna {
+    width: 1240px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.qna table {
+    width: 100%;
+    border-spacing: 20px;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+.qna table tr th {
+    font-weight: bold;
+}
+.qna table tr th, .qna table td {
+    font-size: 16px;
+}
+.qna table tr:first-child td:nth-child(5) {
+    color: #8ca74b
+}
+.qna table tr:nth-of-type(2) td:nth-child(5) {
+    color: #8ca74b
+}
+.qna button {
+    background-color: #ff4000;
+    padding: 8px;
+    margin: 8px 0;
+    cursor: pointer;
+    float: right;
+    border: none;
+    color: white;
+}
+/* 화살표 아이콘 */
+.fa-chevron-up {
+    font-size: 30px;
+    color: #333;
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+    opacity: 0.8;
+}
+.fa-chevron-down {
+    font-size: 30px;
+    color: #333;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    opacity: 0.8;
+}
+
+/* 푸터 */
+.foot {
+    width: 100%;
+    margin-top: 180px;
+    background-color: #e2e2e2;
+}
+
+.footmenu {
+    width: 100%;
+    height: 67.5px;
+    margin: 0 auto;
+    background-color: #77767c;
+}
+
+.footmenu ul {
+    margin: 0 auto;
+    width: 1240px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footmenu ul li {
+    margin: 0 45px;
+    color: white;
+    font-weight: bold;
+}
+
+.footgr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    font-size: 9px;
+    line-height: 25px;
+}
+
+.footgr div {
+    margin: 0 100px;
+}

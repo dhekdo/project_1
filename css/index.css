@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-size: 14px; 
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-weight: 300;
+}
+ul,ol,li { 
+    list-style: none;
+ }
+a { 
+    text-decoration: none; 
+    color: #333; 
+}
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 헤더 */
+header { 
+    width: 100%; 
+    height: 135px; 
+    background-color: white; 
+    min-width: 1240px; 
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.top { 
+    height: 67.5px; 
+    position: relative; 
+}
+.top>div>a>img {
+    margin-top: 5px; 
+    width: 250px; 
+    height: auto; 
+}
+.searchbar { 
+    width: 500px; 
+    height: 30px; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    margin-top: 5px; 
+}
+.searchbar>input[type="search"] { 
+    width: 450px; 
+    height: 25px; 
+    border: none; 
+    outline: none; 
+    border-bottom: 2px solid #333; 
+    position: relative; 
+    padding: 5px; 
+}
+.searchbar>img { 
+    width: 20px; 
+    cursor: pointer; 
+    position: absolute; 
+    right: 55px;
+ }
+.icon { 
+    width: 150px; 
+    height: 65px; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    margin-top: 10px;
+ }
+.icon ul { 
+    display: flex; 
+    justify-content: space-evenly; 
+    text-align: center;
+ }
+
+nav { height: 67.5px; 
+    background-color: #333;
+ }
+nav ul { 
+    width: 100%; 
+    height: 67.5px;  
+    margin: 0 auto; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    min-width: 1200px; 
+}
+nav ul li a { 
+    padding: 0 22px; 
+    color: white; 
+    font-size: 16px; 
+    font-weight: bold; 
+}
+nav ul li:hover a { 
+    color: #ff4000;
+}
+
+.slider { 
+    width: 100%; 
+    height: auto; 
+    min-width: 1240px;
+}
+.slider img { 
+    width: 100%; 
+    height: auto; 
+}
+
+h1 {
+    font-weight: normal; 
+    font-size: 55px; 
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 50px 0;
+    margin-top: 150px;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 8px 0 0 8px;
+    font-weight: bold;
+}
+
+.all {
+    min-width: 1200px;
+}
+
+img {cursor: pointer; }
+
+/* 베스트 상품 구좌 */
+.bestproduct { 
+    width: 100%;
+
+}
+.bestproduct ul { 
+    display: flex;
+}
+.bestproduct li { 
+    text-align: center;
+    width: 25%;
+    margin: 5px;
+}
+.bestproduct img {
+    width: 100%;
+}
+.bestproduct p {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-weight: 300;
+    font-size: 19px;
+    margin-top: 8px;
+}
+
+/* 혜택 배너 */
+.banner { 
+    width: 100%;
+    margin: 130px 0;
+}
+.banner img {
+    width: 100%;
+    min-width: 1500px;
+}
+
+/* 신상품 구좌 */
+.newproduct { 
+    width: 100%;
+}
+.newproduct ul { 
+    display: flex;
+    width: 1240px;
+    margin: 0 auto;          
+}
+.newproduct ul li {
+    width: 50%;
+    margin: 0 10px;
+    justify-content: center;
+}
+.newproduct ul .new_big {
+    width: 70%;
+}
+.newproduct img {
+    width: 100%;
+}
+.newproduct p { margin-left: 8px;
+    line-height: 50px;
+    font-size: 15px;
+    position: relative;
+}
+.newproduct li span:nth-child(1) {
+    font-size: 19px;
+    font-weight: bold;
+    padding-right: 8px;
+}
+.newproduct li span:nth-child(2) {
+    text-decoration: line-through;
+    color: #808080;
+}
+.newproduct li span:nth-child(3) {
+    position: absolute;
+    right: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4000;
+}
+
+/* 베스트 리뷰 구좌 */
+.bestreview {
+    width: 100%;
+}
+.bestreview ul {
+    width: 1240px; 
+    display: flex;
+    margin: 0 auto;
+}
+.bestreview li { 
+    width: 20%;
+    margin: 0 8px;
+}
+.bestreview li img {
+    width: 100%;
+}
+.bestreview p { margin-left: 8px;
+    line-height: 50px;
+    position: relative;
+}
+.bestreview li span:nth-child(1) {
+    font-size: 17px;
+    font-weight: bold;
+    padding-right: 8px;
+}
+.bestreview li span:nth-child(2) {
+    text-decoration: line-through;
+    color: #808080;
+}
+.bestreview li span:nth-child(3) {
+    position: absolute;
+    right: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4000;
+}
+
+/* 포커스온 구좌 */
+.focus { 
+    width: 100%;
+}
+.focus div {
+    width: 100%;
+    text-align: center;
+}
+.focus div img { 
+    width: 75%;
+}
+.focus ul {
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 80px;
+
+}
+.focus ul li {
+    width: 25%;
+    justify-content: center;
+    margin: 8px;
+}
+.focus ul li img {
+    width: 100%;
+}
+.focus p { margin-left: 8px;
+    line-height: 50px;
+    font-size: 15px;
+    position: relative;
+}
+.focus li span:nth-child(1) {
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 8px;
+}
+.focus li span:nth-child(2) {
+    text-decoration: line-through;
+    color: #808080;
+}
+.focus li span:nth-child(3) {
+    position: absolute;
+    right: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #ff4000;
+}
+
+
+/* 선물 구좌 */
+.gift {
+    width: 100%;
+}
+.gift div {
+    width: 100%;
+    text-align: center;
+}
+.gift div img {
+    width: 75%;
+}
+.gift ul {
+    margin: 0 auto;
+    display: flex;
+    width: 1240px;
+    margin-top: 80px;
+}
+.gift ul li {
+    justify-content:center ;
+    width: 25%;
+    margin: 8px;
+}
+.gift ul li img {
+    width: 100%;
+}
+.gift p { margin-left: 8px;
+    line-height: 50px;
+    font-size: 15px;
+    position: relative;
+}
+.gift li span:nth-child(1) {
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 8px;
+}
+.gift li span:nth-child(2) {
+    text-decoration: line-through;
+    color: #808080;
+}
+.gift li span:nth-child(3) {
+    position: absolute;
+    right: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #ff4000;
+}
+
+
+/* 푸터 */
+.foot {
+    width: 100%;
+    margin-top: 180px;
+    background-color: #e2e2e2;
+}
+.footmenu {
+    width: 100%;
+    height: 67.5px;
+    margin: 0 auto;
+    background-color: #77767c;
+}
+.footmenu ul {
+    margin: 0 auto;
+    width: 1240px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footmenu ul li {
+    margin: 0 45px;
+    color: white;
+    font-weight: bold;
+}
+.footgr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    font-size: 9px;
+    line-height: 25px;
+}
+.footgr div {
+    margin: 0 100px;
+}
