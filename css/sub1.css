@@ -673,7 +673,11 @@ h2::after {
     color: white;
     font-weight: bold;
 }
-
+.footmenu ul li:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color: #333
+}
 .footgr {
     display: flex;
     justify-content: center;
