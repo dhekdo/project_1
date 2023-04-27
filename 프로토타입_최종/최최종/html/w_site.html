@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포폴</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        a { 
+            text-decoration: none;
+            color: #000; 
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        /* 상단 */
+        header {
+            background-color: #fff;
+            min-width: 1200px;
+        }
+
+        header .top_header {
+            text-align: center;
+            height: 45px;
+            position: relative;
+        }
+        
+        header .top_header .potato_logo {
+            position: absolute;
+            top: 3px;
+            left: 10px;
+        }
+        
+        header .top_header .potato_logo img {
+            height: 40px;
+        }
+
+        header .top_header .search_box {
+            display: inline-block;
+            line-height: 45px;
+            width: 330px;
+            position: relative;
+        }
+        
+        header .top_header .search_box input {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #000;
+            width: 100%;
+        }
+        
+        header .top_header .search_box input::placeholder {
+            font-size: 11px;
+        }
+
+        header .top_header .search_box i {
+            position: absolute;
+            top: 14px;
+            right: 3px;
+            font-size: 16px;
+        }
+
+        header .top_header .top_sub_menu {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+        }
+
+        header .top_header .top_sub_menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        
+        header .top_header .top_sub_menu i {
+            font-size: 20px;
+        }
+
+        header .top_header .top_sub_menu p {
+            font-size: 10px;
+        }
+
+        header .main_menu {
+            background-color: #000;
+            text-align: center;
+        }
+
+        header .main_menu li {
+            display: inline-block;
+        }
+
+        header .main_menu .txt_line::before {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            background-color: #373737;
+            margin-top: -2px;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+
+        header .main_menu li a {
+            color: #fff;
+            margin-left: 20px;
+            line-height: 50px;
+        }
+
+        header .main_menu li:first-child a {
+            margin-left: 0;
+        } 
+        /* //상단 */
+
+        /* 메인 콘텐츠 */
+        .contents {
+            text-align: center;
+        }
+
+        .contents section {
+            display: inline-block;
+            width: 1200px;
+        }
+
+        .contents .main_banner { 
+            width: 100%; 
+        }
+        .main_banner img {
+            width: 100%;
+        }
+
+        .contents h1 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: lighter;
+            margin: 60px 0 15px;
+        }
+
+        /*베스트 구좌*/
+        .contents .best_prd {
+            width: 100%;
+        }
+
+        .best_prd ul {
+            margin: 0 15px;
+            display: inline-block;
+        }
+
+        .best_prd li {
+            display: inline-block;
+            float: left;
+            width: 24.25%;
+            margin-left: 1%;
+        }
+        
+        .best_prd li:first-child {
+            margin-left: 0;
+        }
+
+        .best_prd img {
+            width: 100%;
+        }
+        
+        .best_prd p {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+        /* //베스트 구좌 */
+
+        /* 상품리스트 */
+        .prd_lst {}
+
+        .prd_lst li {
+            display: inline-block;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .prd_lst a {
+            display: inline-block;
+        }
+        
+        .prd_lst img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .prd_lst .prd_info {
+            margin: 0 5px;
+        }
+
+        .prd_lst .prd_info p {
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .prd_lst .prd_info .brand_name {
+            font-weight: bold;
+            font-size: 13px;
+        }
+        
+        .prd_lst .prd_info .prd_name {
+            margin-bottom: 17px;
+        }
+        
+        .prd_lst .prd_info .prd_price span {
+            font-weight: bold;
+        }
+        
+        .prd_lst .prd_info .prd_price .discount {
+            text-decoration: line-through;
+            font-weight: lighter;
+            font-size: 10px;
+        }
+
+        .prd_lst .prd_info .prd_price .sale {
+            color: red;
+            float: right;
+        }
+        /* //상품리스트 */
+
+        /* 신상 구좌 */
+        .new_prd .prd_lst {
+            text-align: center;
+        }
+        .new_prd .prd_lst li {
+            width: 29.5%;
+        }
+        
+        .new_prd .prd_lst .active_slide {
+            width: 38%;
+            margin: 0 1%;
+        }
+        /* //신상 구좌 */
+
+        /* 베스트 리뷰 */
+        .best_review ul {}
+
+        .best_review li:first-child {
+            margin-left: 0;
+        }
+
+        .best_review li { 
+            width: 18.9%;
+            margin-left: 1%;
+        }
+        /* //베스트 리뷰 */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top_header">
+            <a href="" class="potato_logo">
+                <img src="../images/logo.png" alt="감자로고">
+            </a>
+            <div class="search_box">
+                <input type="search" name="seaech" class="keyword_search" placeholder="지금 바로 [커플잠옷]을 검색해서 인기잠옷을 만나보세요">
+                <i class="xi-search"></i>
+            </div>
+            <ul class="top_sub_menu">
+                <li>
+                    <a href="">
+                        <i class="xi-user-plus-o"></i>
+                        <p>JOIN</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="xi-user-o"></i>
+                        <p>LOGIN</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="xi-market"></i>
+                        <p>2</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="main_menu">
+            <ul>
+                <li>
+                    <a href="">NEW</a>
+                </li>
+                <li>
+                    <a href="">WOMEN</a>
+                </li>
+                <li>
+                    <a href="">MEN</a>
+                </li>
+                <li>
+                    <a href="">BEAUTY</a>
+                </li>
+                <li>
+                    <a href="">LIFE</a>
+                </li>
+                <li>
+                    <a href="">SALE</a>
+                </li>
+                <li>
+                    <a href="">DESIGNER</a>
+                </li>
+                <li class="txt_line">
+                    <a href="">WINTER TREND</a>
+                </li>
+                <li>
+                    <a href="">ORIGINAL</a>
+                </li>
+                <li>
+                    <a href="">EVENT</a>
+                </li>
+                <li>
+                    <a href="">BEST</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contents">
+        <section class="main_banner">
+            <img src="../images/slide_01.PNG" alt="메인배너">
+        </section>    
+
+        <h1>BEST PRODUCT</h1>
+        <section class="best_prd">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="../images/best_01.jpg" alt="">
+                        <p>#디오니 7부 여성페어 베이지 (40수)</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/best_02.jpg" alt="">
+                        <p>#밀크라떼 긴팔 투피스 베이지 (보아털)</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/best_03.jpg" alt="">
+                        <p>#무슈 긴팔 남성페어 네이비 (30수)</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/best_04.jpg" alt="">
+                        <p>#메르시 긴팔 투피스 버건디 (30수)</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <h1>NEW ARRIVALS</h1>
+        <section class="new_prd">
+            <ul class="prd_lst">
+                <li>
+                    <a href="">
+                        <img src="../images/new1.jpg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">케이퍼 긴팔 투피스 네이비 (30수)</p>
+                            <p class="prd_price">
+                                <span class="consumer">49,000</span>
+                                <span class="discount">98,000</span>
+                                <span class="sale">50%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="active_slide">
+                    <a href="">
+                        <img src="../images/nwe3.jpg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">앤의 플라워2 긴팔 투피스 다크블루 (30수)</p>
+                            <p class="prd_price">
+                                <span class="consumer">79,000</span>
+                                <span class="discount">98,000</span>
+                                <span class="sale">20%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/new2.jpg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">티아모 긴팔 여성페어 베이지 (30수)</p>
+                            <p class="prd_price">
+                                <span class="consumer">59,000</span>
+                                <span class="discount">98,000</span>
+                                <span class="sale">40%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+        <h1>BEST REVIEW</h1>
+        <section class="best_review">
+            <ul class="prd_lst">
+                <li>
+                    <a href="">
+                        <img src="../images/review1.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">디엘2 긴팔 투피스 블루 (보아털)</p>
+                            <p class="prd_price">
+                                <span class="consumer">41,400</span>
+                                <span class="discount">92,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/리뷰4.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">조이 긴팔 여성페어 블랙</p>
+                            <p class="prd_price">
+                                <span class="consumer">40,500</span>
+                                <span class="discount">90,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/리뷰2.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">소이라떼 긴팔 투피스 베이지 (보아털)</p>
+                            <p class="prd_price">
+                                <span class="consumer">41,400</span>
+                                <span class="discount">92,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/리뷰3.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">로즐리 긴팔 투피스 핑크 (피치기모)</p>
+                            <p class="prd_price">
+                                <span class="consumer">44,100</span>
+                                <span class="discount">98,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/리뷰5.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">앤의 스토리 여성 긴팔페어 레드</p>
+                            <p class="prd_price">
+                                <span class="consumer">44,100</span>
+                                <span class="discount">98,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <h1>FOCUS ON</h1>
+        <section class="best_review">
+            <img src=" " alt="">
+            <ul class="prd_lst">
+                <li>
+                    <a href="">
+                        <img src="../images/review1.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">디엘2 긴팔 투피스 블루 (보아털)</p>
+                            <p class="prd_price">
+                                <span class="consumer">41,400</span>
+                                <span class="discount">92,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/리뷰4.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">조이 긴팔 여성페어 블랙</p>
+                            <p class="prd_price">
+                                <span class="consumer">40,500</span>
+                                <span class="discount">90,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/리뷰2.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">소이라떼 긴팔 투피스 베이지 (보아털)</p>
+                            <p class="prd_price">
+                                <span class="consumer">41,400</span>
+                                <span class="discount">92,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/리뷰3.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">로즐리 긴팔 투피스 핑크 (피치기모)</p>
+                            <p class="prd_price">
+                                <span class="consumer">44,100</span>
+                                <span class="discount">98,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/리뷰5.jpeg" alt="">
+                        <div class="prd_info">
+                            <p class="brand_name">ULLALA PAJAMAS</p>
+                            <p class="prd_name">앤의 스토리 여성 긴팔페어 레드</p>
+                            <p class="prd_price">
+                                <span class="consumer">44,100</span>
+                                <span class="discount">98,000</span>
+                                <span class="sale">55%</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <footer></footer>
+</body>
+</html>
